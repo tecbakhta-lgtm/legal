@@ -1,13 +1,618 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-<meta charset="UTF-8">
-<title>Adhkari Privacy Policy</title>
-</head>
-<body>
-<h1>Adhkari Privacy Policy</h1>
 
-<p>This page will contain the official privacy policy for Adhkari.</p>
+  <!-- ===== Core meta ===== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ===== SEO ===== -->
+  <title>Privacy Policy — Adhkari</title>
+  <meta name="description" content="Privacy Policy for the Adhkari app: no accounts, no ads and no analytics. Your data stays on your device; crash reporting is optional and off by default.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Replace the placeholder below with the final published URL -->
+  <link rel="canonical" href="https://your-username.github.io/adhkari/privacy-policy.html">
+
+  <!-- ===== Social sharing (optional, safe to remove) ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Privacy Policy — Adhkari">
+  <meta property="og:description" content="Privacy Policy for the Adhkari app: no accounts, no ads and no analytics. Your data stays on your device; crash reporting is optional and off by default.">
+  <meta property="og:url" content="https://your-username.github.io/adhkari/privacy-policy.html">
+
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#ffffff">
+
+  <style>
+    /* ============================================================
+       Adhkari — Privacy Policy
+       Single file. No JavaScript, no external fonts, no libraries.
+       ============================================================ */
+
+    /* ---------- 1. Design tokens ---------- */
+    :root {
+      --content-width: 900px;
+
+      --color-bg: #ffffff;
+      --color-surface: #f6f8fa;
+      --color-text: #1f2328;
+      --color-heading: #0d1117;
+      --color-muted: #56606b;
+      --color-border: #d8dee4;
+      --color-border-soft: #e7ebef;
+      --color-link: #0b57d0;
+      --color-link-hover: #08409b;
+      --color-code-bg: #f2f4f7;
+
+      --radius: 8px;
+
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas,
+                   "Liberation Mono", monospace;
+    }
+
+    /* ---------- 2. Base ---------- */
+    *,
+    *::before,
+    *::after { box-sizing: border-box; }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-sans);
+      font-size: 17px;
+      line-height: 1.75;
+      text-align: left;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ---------- 3. Layout ---------- */
+    .wrap {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .page-header {
+      padding: 72px 0 32px;
+      border-bottom: 1px solid var(--color-border-soft);
+    }
+
+    main {
+      padding: 8px 0 40px;
+    }
+
+    section {
+      /* spacing is handled by heading margins for predictable rhythm */
+    }
+
+    /* ---------- 4. Headings ---------- */
+    h1, h2, h3 {
+      color: var(--color-heading);
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      line-height: 1.25;
+    }
+
+    h1 {
+      margin: 0 0 20px;
+      font-size: 2.25rem;
+    }
+
+    h2 {
+      margin: 56px 0 18px;
+      padding-bottom: 8px;
+      font-size: 1.35rem;
+      border-bottom: 1px solid var(--color-border-soft);
+    }
+
+    h3 {
+      margin: 32px 0 12px;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    /* first section sits closer to the header */
+    main > section:first-of-type > h2 { margin-top: 40px; }
+
+    /* ---------- 5. Text elements ---------- */
+    p {
+      margin: 0 0 18px;
+    }
+
+    strong {
+      font-weight: 600;
+      color: var(--color-heading);
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    small {
+      font-size: 0.9rem;
+      color: var(--color-muted);
+    }
+
+    hr {
+      height: 1px;
+      margin: 48px 0;
+      border: 0;
+      background-color: var(--color-border-soft);
+    }
+
+    /* Document meta block (application, dates) */
+    .doc-meta {
+      margin: 0 0 24px;
+      color: var(--color-muted);
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    .doc-meta p { margin: 0 0 6px; }
+    .doc-meta p:last-child { margin-bottom: 0; }
+
+    /* ---------- 6. Notes / callouts ---------- */
+    .note {
+      margin: 24px 0 0;
+      padding: 14px 18px;
+      background-color: var(--color-surface);
+      border-left: 3px solid var(--color-link);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      color: var(--color-text);
+      font-size: 0.98rem;
+    }
+
+    .note p:last-child { margin-bottom: 0; }
+
+    /* ---------- 7. Quotes ---------- */
+    blockquote {
+      margin: 24px 0;
+      padding: 4px 0 4px 20px;
+      border-left: 3px solid var(--color-border);
+      color: var(--color-muted);
+    }
+
+    blockquote p:last-child { margin-bottom: 0; }
+
+    /* ---------- 8. Lists ---------- */
+    ul, ol {
+      margin: 0 0 18px;
+      padding-left: 24px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    li:last-child { margin-bottom: 0; }
+
+    li::marker {
+      color: var(--color-muted);
+    }
+
+    /* ---------- 9. Links ---------- */
+    a {
+      color: var(--color-link);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      text-decoration-thickness: 1px;
+    }
+
+    a:hover,
+    a:focus {
+      color: var(--color-link-hover);
+      text-decoration-thickness: 2px;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--color-link);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    /* ---------- 10. Inline code ---------- */
+    code {
+      padding: 0.15em 0.4em;
+      background-color: var(--color-code-bg);
+      border-radius: 4px;
+      font-family: var(--font-mono);
+      font-size: 0.875em;
+      word-break: break-word;
+    }
+
+    /* ---------- 11. Tables ---------- */
+    .table-wrap {
+      margin: 24px 0;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.96rem;
+      line-height: 1.6;
+    }
+
+    thead th {
+      background-color: var(--color-surface);
+      color: var(--color-heading);
+      font-weight: 600;
+      text-align: left;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    th, td {
+      padding: 12px 16px;
+      vertical-align: top;
+      border-bottom: 1px solid var(--color-border-soft);
+    }
+
+    tbody th[scope="row"] {
+      text-align: left;
+      font-weight: 600;
+      color: var(--color-heading);
+    }
+
+    tbody tr:last-child th,
+    tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    /* two-column summary table: give the label column a stable width */
+    .table--summary th[scope="row"] { width: 40%; }
+
+    /* ---------- 12. Footer ---------- */
+    .page-footer {
+      padding: 28px 0 56px;
+      border-top: 1px solid var(--color-border-soft);
+      color: var(--color-muted);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    .page-footer p { margin: 0; }
+
+    /* ---------- 13. Responsive ---------- */
+    @media (max-width: 700px) {
+      body { font-size: 16px; line-height: 1.7; }
+      .wrap { padding: 0 18px; }
+      .page-header { padding: 44px 0 26px; }
+      h1 { font-size: 1.75rem; }
+      h2 { margin-top: 44px; font-size: 1.2rem; }
+      th, td { padding: 10px 12px; }
+      .table--summary th[scope="row"] { width: auto; }
+      table { font-size: 0.92rem; }
+    }
+
+    /* ---------- 14. Print ---------- */
+    @media print {
+      body { font-size: 11pt; color: #000; }
+      .wrap { max-width: none; padding: 0; }
+      a { color: #000; text-decoration: none; }
+      h2 { break-after: avoid; }
+      .table-wrap { overflow: visible; }
+      tr, .note { break-inside: avoid; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="page-header">
+    <div class="wrap">
+      <h1>Privacy Policy — Adhkari</h1>
+
+      <div class="doc-meta">
+        <p><strong>Application:</strong> Adhkari (Android package / iOS bundle identifier: <code>com.benbakhta.adhkari</code>)</p>
+        <p><strong>Effective date:</strong> <code>[date of publication]</code></p>
+        <p><strong>Last updated:</strong> <code>[date of publication]</code></p>
+      </div>
+
+      <div class="note">
+        <p>This English text is the authoritative version of this policy. Where a translation is provided, this version governs in case of conflict.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN ===================== -->
+  <main class="wrap" id="main">
+
+    <!-- 1 -->
+    <section aria-labelledby="controller-and-contact">
+      <h2 id="controller-and-contact">1. Controller and contact</h2>
+
+      <p><strong>Controller:</strong> <code>[full legal or trading name of the developer as shown on the store listing]</code> (<strong>"we"</strong>, <strong>"us"</strong>), <code>[postal address for data-protection correspondence]</code>.</p>
+
+      <p><strong>Contact for all privacy matters, including data-protection requests:</strong> <strong><a href="mailto:hassantcm@gmail.com">hassantcm@gmail.com</a></strong></p>
+
+      <p>We have not appointed a Data Protection Officer, and we are not required to do so.</p>
+    </section>
+
+    <!-- 2 -->
+    <section aria-labelledby="scope">
+      <h2 id="scope">2. Scope</h2>
+
+      <p>This policy applies to the Adhkari mobile application for Android and iOS. It does not apply to the Google Play Store, the Apple App Store, or any other app or website you may reach from the app; those services are controlled by their own operators and governed by their own privacy notices.</p>
+    </section>
+
+    <!-- 3 -->
+    <section aria-labelledby="summary">
+      <h2 id="summary">3. Summary</h2>
+
+      <div class="table-wrap">
+        <table class="table--summary">
+          <tbody>
+            <tr>
+              <th scope="row">Accounts, sign-in, passwords</th>
+              <td>None. The app has no account system and no login.</td>
+            </tr>
+            <tr>
+              <th scope="row">Advertising, ad identifiers, ad SDKs</th>
+              <td>None.</td>
+            </tr>
+            <tr>
+              <th scope="row">Analytics, telemetry, behavioural or usage tracking</th>
+              <td>None.</td>
+            </tr>
+            <tr>
+              <th scope="row">Data stored on your device</th>
+              <td>Everything you enter and generate in the app: your name (if you enter one), your adhkar, counters, daily completions, statistics, reminders, tasbih items and settings.</td>
+            </tr>
+            <tr>
+              <th scope="row">Data we receive</th>
+              <td>Crash diagnostics only, and only if you switch crash reporting on.</td>
+            </tr>
+            <tr>
+              <th scope="row">Sale or sharing of personal data</th>
+              <td>None.</td>
+            </tr>
+            <tr>
+              <th scope="row">Data transmitted for any other purpose</th>
+              <td>None.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 4 -->
+    <section aria-labelledby="data-that-stays-on-your-device">
+      <h2 id="data-that-stays-on-your-device">4. Data that stays on your device</h2>
+
+      <p>The app is local-first. The following is created and stored exclusively on your device, in a local SQLite database (<code>dhikr.db</code>) within the app's private storage, and is <strong>not</strong> transmitted to us or to anyone else:</p>
+
+      <ul>
+        <li>The display name you optionally enter, used only to greet you in the app.</li>
+        <li>Your adhkar and their content (title, Arabic text, transliteration, translation, source, repetition count, time of day, icon, colour), including your edits to the adhkar shipped with the app.</li>
+        <li>Daily completions and their timestamps, streaks, statistics and usage duration recorded locally.</li>
+        <li>Tasbih items and counters.</li>
+        <li>Your categories, ordering, reminder times, language, theme, numeral system, week start, reader appearance, sound and vibration preferences, and your crash-reporting choice.</li>
+      </ul>
+
+      <p>A random installation identifier (a UUID) is generated on your device and stored in the operating system's secure store (Keychain on iOS, the encrypted preferences store on Android). It is described in section 5.</p>
+
+      <p>We have no server for this data, no copy of it, and no technical means of accessing it.</p>
+    </section>
+
+    <!-- 5 -->
+    <section aria-labelledby="data-we-receive-crash-diagnostics">
+      <h2 id="data-we-receive-crash-diagnostics">5. Data we receive: crash diagnostics</h2>
+
+      <p>Crash reporting is <strong>off by default</strong>. On first launch the app asks you to make an explicit choice, and nothing is transmitted unless and until you enable it. When crash reporting is enabled, and only then, the following is transmitted to our processor Sentry (section 8) when the app crashes or encounters an unhandled error:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Data</th>
+              <th scope="col">What it contains</th>
+              <th scope="col">Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Error diagnostics</th>
+              <td>The error type and message, the stack trace, and — for interface errors — the React component stack</td>
+              <td>Identify and fix the defect</td>
+            </tr>
+            <tr>
+              <th scope="row">Application identifiers</th>
+              <td>App version and build, release and distribution identifiers, and the environment tag (<code>production</code>)</td>
+              <td>Attribute the report to the correct release</td>
+            </tr>
+            <tr>
+              <th scope="row">Device and system context</th>
+              <td>Technical context collected automatically by the Sentry SDK about the device and the app at the moment of failure, such as device model, operating-system version, app state, locale, time zone and memory or storage state</td>
+              <td>Reproduce and diagnose the defect</td>
+            </tr>
+            <tr>
+              <th scope="row">Session records</th>
+              <td>Basic session records (session start and whether it ended in a crash), used to compute crash-free rates</td>
+              <td>Measure stability</td>
+            </tr>
+            <tr>
+              <th scope="row">Breadcrumbs</th>
+              <td>A short technical trail of preceding events, including internal diagnostic messages logged by the app</td>
+              <td>Understand the sequence leading to the crash</td>
+            </tr>
+            <tr>
+              <th scope="row">Anonymous installation identifier</th>
+              <td>The random identifier described in section 4, attached as the report's user reference. It contains no name, email address, telephone number or account, and we hold nothing that links it to you</td>
+              <td>Group reports originating from the same installation</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>Performance and behavioural monitoring are disabled</strong> (trace sampling is set to zero), so no screen views, taps, navigation analytics, timings or user-behaviour profiles are collected.</p>
+
+      <p>In the terminology used by the app stores, the error diagnostics above are declared as <strong>crash data</strong>, the session records and breadcrumbs as <strong>other diagnostic data</strong>, and the installation identifier as a <strong>device identifier</strong> — each not linked to your identity, not used for tracking, and used solely for app functionality.</p>
+
+      <p>We do not include the content of your adhkar, your name or your records in crash reports, and the app is not designed to place them there. Because diagnostic messages are generated by the software rather than selected by us, we cannot guarantee that a technical error message never contains a fragment of data that caused the error. Any such fragment is processed only for the diagnostic purposes above.</p>
+
+      <p>Your device's IP address is necessarily visible to the receiving servers as an unavoidable feature of any internet transmission. The app is not configured to attach the IP address, or any other personally identifying network data, to the report itself.</p>
+
+      <p>Reports are transmitted over an encrypted connection (HTTPS/TLS).</p>
+    </section>
+
+    <!-- 6 -->
+    <section aria-labelledby="legal-bases">
+      <h2 id="legal-bases">6. Legal bases (GDPR / UK GDPR)</h2>
+
+      <p>Processing of crash diagnostics is based on your <strong>consent</strong>, Article 6(1)(a) GDPR and UK GDPR, given through the in-app crash-reporting setting. You may withdraw consent at any time (section 7); withdrawal does not affect the lawfulness of processing carried out before withdrawal.</p>
+
+      <p>We carry out no other processing of personal data as controller. Data described in section 4 is processed by you, on your own device, and is not accessible to us.</p>
+    </section>
+
+    <!-- 7 -->
+    <section aria-labelledby="your-choice-and-how-to-change-it">
+      <h2 id="your-choice-and-how-to-change-it">7. Your choice, and how to change it</h2>
+
+      <ul>
+        <li>The crash-reporting setting is presented on first launch and can be changed at any time in <strong>Settings → Crash reports</strong>.</li>
+        <li>Declining, or leaving the setting off, results in <strong>zero transmission</strong>: no crash report, no session record and no identifier leaves the device.</li>
+        <li>Switching the setting <strong>off</strong> stops transmission immediately and removes the installation identifier from any future report. Reports already received are not automatically deleted; see section 11 to request erasure.</li>
+        <li>Switching the setting <strong>on</strong> applies to new reports and takes effect no later than the next app start.</li>
+      </ul>
+    </section>
+
+    <!-- 8 -->
+    <section aria-labelledby="processor">
+      <h2 id="processor">8. Processor</h2>
+
+      <p>We use <strong>Sentry</strong> (operated by Functional Software, Inc., trading as Sentry) exclusively as a <strong>processor</strong> (service provider) to receive, store and display crash diagnostics on our behalf and on our documented instructions. Sentry does not use this data for its own purposes, and we do not permit it to sell or share the data or to use it for advertising.</p>
+
+      <p>Crash data for this app is processed in Sentry's <strong>United States</strong> region. Sentry's privacy notice: <a href="https://sentry.io/privacy/" rel="noopener noreferrer">https://sentry.io/privacy/</a></p>
+
+      <p>We use no other processor, no analytics provider, no advertising network, no attribution or measurement service, no data broker, and no other external API. Apart from the crash reports described above, the app makes no network requests of its own and contains no embedded web content.</p>
+
+      <p>The application is distributed through Google Play and the Apple App Store. Those platforms process data about the download, installation and — where applicable — platform-level crash collection under their own privacy notices, as independent controllers, outside our control.</p>
+    </section>
+
+    <!-- 9 -->
+    <section aria-labelledby="notifications">
+      <h2 id="notifications">9. Notifications</h2>
+
+      <p>Reminders are <strong>local notifications scheduled on the device</strong> by the operating system. No push tokens are generated or registered, no notification content is sent to us or to any server, and no push messages are received from us.</p>
+    </section>
+
+    <!-- 10 -->
+    <section aria-labelledby="backups-you-create-and-external-links">
+      <h2 id="backups-you-create-and-external-links">10. Backups you create, and external links</h2>
+
+      <ul>
+        <li><strong>Export:</strong> you can create a backup file (JSON) containing all of your app data, including your name if you entered one. The file is written to the app's own storage and then either shared through the system share sheet or saved to a folder you select. The destination is entirely your choice; we neither receive the file nor have visibility of it. Once the file leaves the app, it is protected only by the storage or service you send it to.</li>
+        <li><strong>Import:</strong> you can restore data by selecting a backup file through the system file picker. The file is read on the device only. The app requests no broad access to your storage, media or photo library.</li>
+        <li><strong>External link:</strong> the Sources screen contains a link to <code>hisnmuslim.com</code>, which opens in your external browser. Once you follow it, that website's own privacy practices apply.</li>
+      </ul>
+    </section>
+
+    <!-- 11 -->
+    <section aria-labelledby="your-rights">
+      <h2 id="your-rights">11. Your rights</h2>
+
+      <p><strong>If you are in the EEA or the UK</strong>, you have the right to request access to your personal data, rectification, erasure, restriction of processing, objection, and data portability, and to withdraw consent at any time. You also have the right to lodge a complaint with your national supervisory authority (in the UK, the Information Commissioner's Office).</p>
+
+      <p><strong>If you are a California resident</strong>, you have the right to know what personal information is collected and to what purpose, to request deletion or correction, and to be free from discrimination for exercising these rights. In the twelve months preceding the date of this policy, the only categories of personal information collected are <strong>identifiers</strong> (the anonymous installation identifier) and <strong>internet or other electronic network activity information</strong> (crash diagnostics), collected only with your consent and only for app functionality. We do <strong>not</strong> collect sensitive personal information, we do <strong>not</strong> sell or share personal information, and we do <strong>not</strong> engage in cross-context behavioural advertising or in profiling for decisions producing legal or similarly significant effects. Residents of other US states with comparable statutes may exercise equivalent rights on the same basis.</p>
+
+      <p><strong>How to exercise your rights.</strong> Send your request to <strong><a href="mailto:hassantcm@gmail.com">hassantcm@gmail.com</a></strong>. Because we hold no account and no information identifying you, we are normally unable to connect a request to a specific record: to locate crash reports relating to your installation, we require the installation identifier concerned. Where we cannot identify you from the data we hold and you cannot provide additional identifying information, Article 11(2) GDPR applies and we may be unable to act on a request for access, rectification, erasure, restriction or portability. Data held only on your device can be erased by you at any time using <strong>Settings → Reset all data</strong>, by clearing the app's data in the operating system, or by uninstalling the app.</p>
+    </section>
+
+    <!-- 12 -->
+    <section aria-labelledby="retention">
+      <h2 id="retention">12. Retention</h2>
+
+      <ul>
+        <li><strong>Crash diagnostics:</strong> retained by Sentry for the retention period applicable to our account and then deleted automatically. We do not retain separate copies elsewhere.</li>
+        <li><strong>Device data:</strong> persists on your device until you delete it in the app, clear the app's data, or uninstall the app. The installation identifier remains in the operating system's secure store until the app's stored data is removed by the operating system; it is not deleted merely by switching crash reporting off.</li>
+      </ul>
+    </section>
+
+    <!-- 13 -->
+    <section aria-labelledby="international-transfers">
+      <h2 id="international-transfers">13. International transfers</h2>
+
+      <p>If you enable crash reporting from the EEA or the UK, the resulting crash diagnostics are transferred to the United States for processing by Sentry. That transfer takes place on the basis of the data-processing terms and transfer mechanism offered by Sentry to its customers, which incorporate the European Commission's Standard Contractual Clauses and, for the United Kingdom, the UK International Data Transfer Addendum.</p>
+    </section>
+
+    <!-- 14 -->
+    <section aria-labelledby="security">
+      <h2 id="security">14. Security</h2>
+
+      <p>Crash diagnostics are transmitted over encrypted connections (HTTPS/TLS). On the device, app data is held in the application's private storage area protected by the operating system's application sandbox and device-level encryption, and the installation identifier is held in the operating system's secure store. No security measure is absolute, and we cannot guarantee the security of a device that is compromised, rooted or jailbroken, or of a backup file after you have exported it.</p>
+    </section>
+
+    <!-- 15 -->
+    <section aria-labelledby="permissions">
+      <h2 id="permissions">15. Permissions</h2>
+
+      <p>The app requests only the following:</p>
+
+      <ul>
+        <li><strong>Notifications</strong> (<code>POST_NOTIFICATIONS</code> on Android 13 and above; the notification permission prompt on iOS) — to display the reminders you schedule.</li>
+        <li><strong>Start after device restart</strong> (<code>RECEIVE_BOOT_COMPLETED</code> on Android) — to restore your scheduled reminders after the device is restarted.</li>
+        <li><strong>Access to a folder or file you select</strong>, at the moment you export or import a backup, granted through the operating system's own file picker and only for the file or folder you choose.</li>
+        <li><strong>Audio output settings</strong> (<code>MODIFY_AUDIO_SETTINGS</code> on Android) — a normal permission, requiring no prompt and granting no access to any recording function, used solely to play the short sound effects that accompany counting when you enable sound in Settings.</li>
+      </ul>
+
+      <p>The app requests no access to location, camera, microphone or audio recording, contacts, calendar, photo library, Bluetooth, NFC, body sensors, call or SMS data, or installed-app lists.</p>
+    </section>
+
+    <!-- 16 -->
+    <section aria-labelledby="data-we-do-not-collect">
+      <h2 id="data-we-do-not-collect">16. Data we do not collect</h2>
+
+      <p>For the avoidance of doubt, the app does not collect, transmit or receive: names, email addresses, telephone numbers, postal addresses or any contact details; account credentials, passwords or authentication data; payment or financial information; precise or approximate location; contacts, calendar entries, photos, videos, audio recordings, files or messages; health, fitness or biometric data; browsing or search history; advertising identifiers or any cross-app or cross-site tracking data; usage analytics, product-interaction data or performance data; cookies or similar tracking technologies (the app has no web interface). The app does not create user profiles and does not disclose data to data brokers.</p>
+    </section>
+
+    <!-- 17 -->
+    <section aria-labelledby="children">
+      <h2 id="children">17. Children</h2>
+
+      <p>Adhkari is a general-audience application and is not directed to children. We do not knowingly collect personal information from children. The only data we can receive is anonymous crash diagnostics, and only where the setting has been enabled. If you believe a child has caused information to be provided to us and you wish it removed, contact <strong><a href="mailto:hassantcm@gmail.com">hassantcm@gmail.com</a></strong>.</p>
+    </section>
+
+    <!-- 18 -->
+    <section aria-labelledby="development-and-test-builds">
+      <h2 id="development-and-test-builds">18. Development and test builds</h2>
+
+      <p>Crash reporting is disabled entirely in development builds, irrespective of the setting, so no crash diagnostics and no identifier are transmitted during development or testing.</p>
+    </section>
+
+    <!-- 19 -->
+    <section aria-labelledby="changes-to-this-policy">
+      <h2 id="changes-to-this-policy">19. Changes to this policy</h2>
+
+      <p>If we change what we process or how we process it, we will publish an updated policy with a revised "Last updated" date. Where a change requires it, we will seek your consent again before the new processing begins.</p>
+    </section>
+
+    <!-- 20 -->
+    <section aria-labelledby="contact">
+      <h2 id="contact">20. Contact</h2>
+
+      <p><strong><a href="mailto:hassantcm@gmail.com">hassantcm@gmail.com</a></strong></p>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="page-footer">
+    <div class="wrap">
+      <p>Adhkari · <a href="mailto:hassantcm@gmail.com">hassantcm@gmail.com</a></p>
+    </div>
+  </footer>
 
 </body>
 </html>
